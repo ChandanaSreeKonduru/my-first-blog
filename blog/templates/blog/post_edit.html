@@ -2,8 +2,14 @@
 
 {% block content %}
     <h2>New post</h2>
-    <form method="POST" class="post-form">{% csrf_token %}
+    <form method="POST" class="post-form" >{% csrf_token %}
         {{ form.as_p }}
+        <div style="height: 25px; width: 25px;">
+        	<input type="checkbox" name="checkbox" id="checkbox_id" value="value" required="">
+			<label for="checkbox_id">published</label>
+         </div>
+         <br>
         <button type="submit" class="save btn btn-default">Save</button>
-    </form>
+    
+</form>
 {% endblock %}
